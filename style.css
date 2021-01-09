@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    width: 100%;
+
+}
+body{
+   height: 100%;
+   width: 100%;
+   
+}
+.carousel_container {
+    position: absolute;
+    background-color: hsl(270, 7%, 64%);
+    height: 400px;
+    margin: 100px auto;
+    width: 60%;
+    left: 20%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.carousel_items {
+    position: relative;
+    flex: 0 0 100%;
+    animation-name: toend;
+    animation-timing-function: ease;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+.carousel_items:hover {
+    animation-play-state: paused;
+}
+img {
+    width: 100%;
+    max-height: 100%; 
+}
+@keyframes toend {
+    50% { 
+      transform: translateX(-300%);  
+    }
+    100%{
+        transform: translateX(0); 
+    }
+}
+
+
